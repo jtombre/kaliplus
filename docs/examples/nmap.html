@@ -1,0 +1,689 @@
+<!DOCTYPE html><html
+dir="ltr" lang="en-US"><head><meta
+charset="UTF-8" /><meta
+name="viewport" content="width=device-width, initial-scale=1" /><link
+rel="stylesheet" type="text/css" href="http://www.cyberciti.biz/cms/wp-content/thesis/skins/classic-r/css.css" media="screen, projection" /><title>Top 30 Nmap Command Examples For Sys/Network Admins</title><meta
+name="description" content="Nmap command examples and tutorials to scan a host/network, so to find out the possible vulnerable points in the hosts and secure the system." /><meta
+name="robots" content="noodp, noydir" /><link
+rel="canonical" href="http://www.cyberciti.biz/networking/nmap-command-examples-tutorials/" /><link
+rel="alternate" type="application/rss+xml" title="nixCraft feed" href="http://www.cyberciti.biz/feed/" /><link
+rel="pingback" href="http://www.cyberciti.biz/cms/xmlrpc.php" /><link
+rel="alternate" type="application/rss+xml" title="nixCraft &raquo; Top 30 Nmap Command Examples For Sys/Network Admins Comments Feed" href="http://www.cyberciti.biz/networking/nmap-command-examples-tutorials/feed/" /><link
+rel="shortcut icon" href="http://www.cyberciti.biz/cms/wp-content/themes/thesis/lib/images/favicon.ico" /><!--
+	generated 705 seconds ago
+	generated in 0.216 seconds
+	served from batcache in 0.002 seconds
+	expires in 5295 seconds
+-->
+</head><body
+class="template-single"><div
+class="container"><center><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>  <ins
+class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-7825705102693166"
+data-ad-slot="4167943066"
+data-ad-format="auto"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> </center> <br/> <span
+class="menu_control">≡ Menu</span><ul
+id="menu-home" class="menu"><li
+id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-32"><a
+href="http://www.cyberciti.biz/topics/">Main Menu</a><ul
+class="sub-menu"><li
+id="menu-item-34" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34"><a
+href="http://www.cyberciti.biz/topics/datacenter/">Datacenter</a></li><li
+id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35"><a
+href="http://www.cyberciti.biz/topics/hardware/">Hardware</a></li><li
+id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-38"><a
+href="http://www.cyberciti.biz/topics/security/">IT / Linux Security</a></li><li
+id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37"><a
+href="http://www.cyberciti.biz/topics/open-source/">Open source</a></li><li
+id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31"><a
+href="http://www.cyberciti.biz/topics/reviews/">Reviews</a></li><li
+id="menu-item-39" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-39"><a
+href="http://www.cyberciti.biz/topics/storage/">Storage</a></li><li
+id="menu-item-40" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a
+href="http://www.cyberciti.biz/topics/virtualization/">Virtualization</a></li><li
+id="menu-item-33" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-33"><a
+href="http://www.cyberciti.biz/topics/cloud-computing/">Cloud Computing</a><ul
+class="sub-menu"><li
+id="menu-item-85" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-85"><a
+title="CDN " href="http://www.cyberciti.biz/topics/cloud-computing/content-delivery-network/">Content delivery network</a></li></ul></li><li
+id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-41"><a
+href="http://www.cyberciti.biz/topics/mobile-devices/">Mobile</a><ul
+class="sub-menu"><li
+id="menu-item-42" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42"><a
+href="http://www.cyberciti.biz/topics/mobile-devices/android/">Android</a></li><li
+id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a
+href="http://www.cyberciti.biz/topics/mobile-devices/ios/">iOS</a></li></ul></li><li
+id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36"><a
+href="http://www.cyberciti.biz/topics/networking/">Networking</a></li><li
+id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-28"><a
+href="http://www.cyberciti.biz/#">Programming</a><ul
+class="sub-menu"><li
+id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29"><a
+title="Linux Shell Scripting Tutorial" href="http://bash.cyberciti.biz/guide/Main_Page">Linux Shell Scripting</a></li><li
+id="menu-item-30" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30"><a
+title="Python programming  tutorials" href="http://www.cyberciti.biz/topics/python-tutorials/">Python</a></li></ul></li><li
+id="menu-item-377" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377"><a
+title="See all topics by Category or Month" href="http://www.cyberciti.biz/topics/">See all topics</a></li></ul></li><li
+id="menu-item-378" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-378"><a
+title="Linux How-To Articles, Tips, and Guides" href="http://www.cyberciti.biz/faq/">Linux How-To &#038; Tutorials</a></li><li
+id="menu-item-62" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62"><a
+title="About us" href="http://www.cyberciti.biz/tips/about-us">About</a></li><li
+id="menu-item-63" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63"><a
+title="Email us " href="http://www.cyberciti.biz/tips/contact-us">Contact us</a></li><li
+id="menu-item-65" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65"><a
+title="Various aspects of nixCraft can be monitored with RSS feeds." href="http://www.cyberciti.biz/nixcraft-rss-feed-syndication/">RSS/Feed</a></li></ul><div
+id="header" class="header"><div
+id="site_title"><a
+href="http://www.cyberciti.biz">nixCraft</a></div><div
+id="site_tagline">Linux Tips, Hacks, Tutorials, And Ideas In Blog</div></div><div
+class="columns"><div
+class="content"><div
+id="post-270" class="post_box grt top" itemscope itemtype="http://schema.org/Article"><div
+class="headline_area"><h1 class="headline" itemprop="name">Top 30 Nmap Command Examples For Sys/Network Admins</h1><div
+class="byline small"> <span
+class="post_author_intro">by</span> <span
+class="post_author" itemprop="author">Vivek Gite</span><meta
+itemprop="datePublished" content="2012-11-26" /><meta
+itemprop="dateModified" content="2012-12-11" /> <span
+class="post_date_intro">on</span> <span
+class="post_date" title="2012-11-26">November 26, 2012</span><div
+class="post_cats" itemprop="keywords"> <span
+class="post_cats_intro">in</span> <a
+href="http://www.cyberciti.biz/topics/open-source/command-line-hacks/" rel="category tag">Command Line Hacks</a>, <a
+href="http://www.cyberciti.biz/topics/howto/" rel="category tag">Howto</a>, <a
+href="http://www.cyberciti.biz/topics/networking/" rel="category tag">Networking</a>, <a
+href="http://www.cyberciti.biz/topics/security/" rel="category tag">Security</a></div></div></div><div
+class="post_content" itemprop="articleBody"><p><span
+class="drop_cap">N</span>map is short for Network Mapper. It is an open source security tool for network exploration, security scanning and auditing. However, nmap command comes with lots of options that can make the utility more robust and difficult to follow for new users.</p><p>The purpose of this post is to introduce a user to the nmap command line tool to scan a host and/or network, so to find out the possible vulnerable points in the hosts. You will also learn how to use Nmap for offensive and defensive purposes.</p><div
+id="attachment_276" style="width: 603px" class="wp-caption aligncenter"><a
+href="http://www.cyberciti.biz/networking/nmap-command-examples-tutorials/attachment/welcome-nmap/" rel="attachment wp-att-276"><img
+src="http://s0.cyberciti.org/uploads/cms/2012/11/welcome-nmap.png" alt="nmap in action" title="Nmap Tutorial / Examples PDF Download" width="593" height="441" class="size-full wp-image-276" /></a><p
+class="wp-caption-text">nmap in action</p></div><h2>More about nmap</h2><p>From the man page:</p><blockquote><p>Nmap ("Network Mapper") is an open source tool for network exploration and security auditing. It was designed to rapidly scan large networks, although it works fine against single hosts. Nmap uses raw IP packets in novel ways to determine what hosts are available on the network, what services (application name and version) those hosts are offering, what operating systems (and OS versions) they are running, what type of packet filters/firewalls are in use, and dozens of other characteristics. While Nmap is commonly used for security audits, many systems and network administrators find it useful for routine tasks such as network inventory, managing service upgrade schedules, and monitoring host or service uptime.</p></blockquote><p>It was originally written by Gordon Lyon and it can answer the following questions easily:</p><ol><li>What computers did you find running on the local network?</li><li>What IP addresses did you find running on the local network?</li><li>What is the operating system of your target machine?</li><li>Find out what ports are open on the machine that you just scanned?</li><li>Find out if the system is infected with malware or virus.</li><li>Search for unauthorized servers or network service on your network.</li><li>Find and remove computers which don't meet the organization's minimum level of security.</li></ol><h2>Sample setup (LAB)</h2><p>Port scanning may be illegal in some jurisdictions. So setup a lab as follows:</p><pre>
+                              +---------+
+        +---------+           | Network |         +--------+
+        | server1 |-----------+ swtich  +---------|server2 |
+        +---------+           | (sw0)   |         +--------+
+                              +----+----+
+                                   |
+                                   |
+                         +---------+----------+
+                         | wks01 Linux/OSX    |
+                         +--------------------+
+</pre><p>Where,</p><ul><li>wks01 is your computer either running Linux/OS X or Unix like operating system. It is used for scanning your local network. The nmap command must be installed on this computer.</li><li>server1 can be powered by Linux / Unix / MS-Windows operating systems. This is an unpatched server. Feel free to install a few services such as a web-server, file server and so on.</li><li>server2 can be powered by Linux / Unix / MS-Windows operating systems. This is a <a
+href="http://www.cyberciti.biz/tips/linux-iptables-examples.html" title="See how to setup Linux firewall">fully patched server with firewall</a>. Again, feel free to install few services such as a web-server, file server and so on.</li><li>All three systems are connected via switch.</li></ul><h2>How do I install nmap?</h2><p>See:</p><ol><li><a
+href="http://www.cyberciti.biz/faq/install-nmap-debian-ubuntu-server-desktop-system/">Debian / Ubuntu Linux: Install nmap Software For Scanning Network</a></li><li><a
+href="http://www.cyberciti.biz/faq/howto-install-nmap-on-centos-rhel-redhat-enterprise-linux/">CentOS / RHEL: Install nmap Network Security Scanner</a></li><li><a
+href="http://www.cyberciti.biz/faq/installing-nmap-network-port-scanner-under-openbsd-using-pkg_add/">OpenBSD: Install nmap Network Security Scanner</a></li></ol><h2>#1: Scan a single host or an IP address (IPv4)</h2><pre class="bash"><span style="color: #808080; font-style: italic;">### Scan a single ip address ###</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.1</span>
+&nbsp;
+<span style="color: #808080; font-style: italic;">## Scan a host name ###</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> server1.cyberciti.biz
+&nbsp;
+<span style="color: #808080; font-style: italic;">## Scan a host name with <span style="color: #c20cb9; font-weight: bold;">more</span> info###</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -v server1.cyberciti.biz
+&nbsp;</pre><p>Sample outputs:<br
+/><div
+style="width: 602px" class="wp-caption alignnone"><a
+href="http://www.cyberciti.biz/faq/howto-install-nmap-on-centos-rhel-redhat-enterprise-linux/"><img
+alt="Fig.01: nmap output" src="http://s0.cyberciti.org/uploads/faq/2012/11/redhat-nmap-command-output.png" title="Fig.01: nmap output" width="592" height="176" /></a><p
+class="wp-caption-text">Fig.01: nmap output</p></div></p><h2>#2: Scan multiple IP address or subnet  (IPv4)</h2><pre>nmap 192.168.1.1 192.168.1.2 192.168.1.3
+## works with same subnet i.e. 192.168.1.0/24
+nmap 192.168.1.1,2,3
+</pre><p>You can scan a range of IP address too:</p><pre>nmap 192.168.1.1-20</pre><p>You can scan a range of IP address using a wildcard:</p><pre>nmap 192.168.1.*</pre><p>Finally, you scan an entire subnet:</p><pre>nmap 192.168.1.0/24</pre><h2>#3: Read list of hosts/networks from a file  (IPv4)</h2><p>The -iL option allows you to read the list of target systems using a text file. This is useful to scan a large number of hosts/networks. Create a text file as follows:<br
+/> <code>cat > /tmp/test.txt</code><br
+/> Sample outputs:</p><pre>server1.cyberciti.biz
+192.168.1.0/24
+192.168.1.1/24
+10.1.2.3
+localhost
+</pre><p>The syntax is:</p><pre>nmap -iL /tmp/test.txt</pre><h2>#4: Excluding hosts/networks  (IPv4)</h2><p>When scanning a large number of hosts/networks you can exclude hosts from a scan:</p><pre>nmap 192.168.1.0/24 --exclude 192.168.1.5
+nmap 192.168.1.0/24 --exclude 192.168.1.5,192.168.1.254</pre><p>OR exclude list from a file called /tmp/exclude.txt</p><pre>nmap -iL /tmp/scanlist.txt --excludefile /tmp/exclude.txt</pre><h2>#5: Turn on OS and version detection scanning script  (IPv4)</h2><pre>nmap -A 192.168.1.254
+nmap -v -A 192.168.1.1
+nmap -A -iL /tmp/scanlist.txt </pre><h2>#6: Find out if a host/network is protected by a firewall</h2><pre>nmap -sA 192.168.1.254
+nmap -sA server1.cyberciti.biz</pre><h2>#7: Scan a host when protected by the firewall</h2><pre>nmap -PN 192.168.1.1
+nmap -PN server1.cyberciti.biz</pre><h2>#8: Scan an IPv6 host/address</h2><p>The <kbd>-6</kbd> option enable IPv6 scanning. The syntax is:</p><pre>nmap -6 IPv6-Address-Here
+nmap -6 server1.cyberciti.biz
+nmap -6 2607:f0d0:1002:51::4
+nmap -v A -6 2607:f0d0:1002:51::4</pre><h2>#9: Scan a network and find out which servers and devices are up and running</h2><p>This is known as host discovery or ping scan:</p><pre>nmap -sP 192.168.1.0/24</pre><p>Sample outputs:</p><pre>Host 192.168.1.1 is up (0.00035s latency).
+MAC Address: BC:AE:C5:C3:16:93 (Unknown)
+Host 192.168.1.2 is up (0.0038s latency).
+MAC Address: 74:44:01:40:57:FB (Unknown)
+Host 192.168.1.5 is up.
+Host nas03 (192.168.1.12) is up (0.0091s latency).
+MAC Address: 00:11:32:11:15:FC (Synology Incorporated)
+Nmap done: 256 IP addresses (4 hosts up) scanned in 2.80 second</pre><h2>#10: How do I perform a fast scan?</h2><pre>nmap -F 192.168.1.1</pre><h2>#11: Display the reason a port is in a particular state</h2><pre>nmap --reason 192.168.1.1
+nmap --reason server1.cyberciti.biz</pre><h2>#12: Only show open (or possibly open) ports</h2><pre>nmap --open 192.168.1.1
+nmap --open server1.cyberciti.biz</pre><h2>#13: Show all packets sent and received</h2><pre>nmap --packet-trace 192.168.1.1
+nmap --packet-trace server1.cyberciti.biz</pre><h2>14#: Show host interfaces and routes</h2><p>This is useful for debugging (<a
+href="http://www.cyberciti.biz/faq/howto-linux-configuring-default-route-with-ipcommand/">ip command</a> or <a
+href="http://www.cyberciti.biz/faq/what-is-a-routing-table/">route command</a> or <a
+href="http://www.cyberciti.biz/faq/linux-unix-open-ports/">netstat command</a> like output using nmap)</p><pre>nmap --iflist</pre><p>Sample outputs:</p><pre class="ini">Starting Nmap <span style="">5.00</span> <span style="">&#40;</span> http://nmap.org <span style="">&#41;</span> at <span style="">2012</span><span style="">-11</span><span style="">-27</span> <span style="">02</span>:<span style="">01</span> IST
+************************INTERFACES************************
+DEV    <span style="">&#40;</span>SHORT<span style="">&#41;</span>  IP/MASK          TYPE        UP MAC
+lo     <span style="">&#40;</span>lo<span style="">&#41;</span>     <span style="">127.0</span><span style="">.0</span><span style="">.1</span>/<span style="">8</span>      loopback    up
+eth0   <span style="">&#40;</span>eth0<span style="">&#41;</span>   <span style="">192.168</span><span style="">.1</span><span style="">.5</span>/<span style="">24</span>   ethernet    up B8:AC:6F:<span style="">65</span>:<span style="">31</span>:E5
+vmnet1 <span style="">&#40;</span>vmnet1<span style="">&#41;</span> <span style="">192.168</span><span style="">.121</span><span style="">.1</span>/<span style="">24</span> ethernet    up <span style="">00</span>:<span style="">50</span>:<span style="">56</span>:C0:<span style="">00</span>:<span style="">01</span>
+vmnet8 <span style="">&#40;</span>vmnet8<span style="">&#41;</span> <span style="">192.168</span><span style="">.179</span><span style="">.1</span>/<span style="">24</span> ethernet    up <span style="">00</span>:<span style="">50</span>:<span style="">56</span>:C0:<span style="">00</span>:<span style="">08</span>
+ppp0   <span style="">&#40;</span>ppp0<span style="">&#41;</span>   <span style="">10.1</span><span style="">.19</span><span style="">.69</span>/<span style="">32</span>    point2point up
+&nbsp;
+**************************ROUTES**************************
+DST/MASK         DEV    GATEWAY
+<span style="">10.0</span><span style="">.31</span><span style="">.178</span>/<span style="">32</span>   ppp0
+<span style="">209.133</span><span style="">.67</span><span style="">.35</span>/<span style="">32</span> eth0   <span style="">192.168</span><span style="">.1</span><span style="">.2</span>
+<span style="">192.168</span><span style="">.1</span><span style="">.0</span>/<span style="">0</span>    eth0
+<span style="">192.168</span><span style="">.121</span><span style="">.0</span>/<span style="">0</span>  vmnet1
+<span style="">192.168</span><span style="">.179</span><span style="">.0</span>/<span style="">0</span>  vmnet8
+<span style="">169.254</span><span style="">.0</span><span style="">.0</span>/<span style="">0</span>    eth0
+<span style="">10.0</span><span style="">.0</span><span style="">.0</span>/<span style="">0</span>       ppp0
+<span style="">0.0</span><span style="">.0</span><span style="">.0</span>/<span style="">0</span>        eth0   <span style="">192.168</span><span style="">.1</span><span style="">.2</span>
+&nbsp;</pre><h2>#15: How do I scan specific ports?</h2><pre class="bash">map -p <span style="color: #7a0874; font-weight: bold;">&#091;</span>port<span style="color: #7a0874; font-weight: bold;">&#093;</span> hostName
+<span style="color: #808080; font-style: italic;">## Scan port <span style="color: #000000;">80</span></span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -p <span style="color: #000000;">80</span> <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.1</span>
+&nbsp;
+<span style="color: #808080; font-style: italic;">## Scan TCP port <span style="color: #000000;">80</span></span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -p T:<span style="color: #000000;">80</span> <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.1</span>
+&nbsp;
+<span style="color: #808080; font-style: italic;">## Scan UDP port <span style="color: #000000;">53</span></span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -p U:<span style="color: #000000;">53</span> <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.1</span>
+&nbsp;
+<span style="color: #808080; font-style: italic;">## Scan two ports ##</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -p <span style="color: #000000;">80</span>,<span style="color: #000000;">443</span> <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.1</span>
+&nbsp;
+<span style="color: #808080; font-style: italic;">## Scan port ranges ##</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -p <span style="color: #000000;">80</span><span style="color: #000000;">-200</span> <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.1</span>
+&nbsp;
+<span style="color: #808080; font-style: italic;">## Combine all options ##</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -p U:<span style="color: #000000;">53</span>,<span style="color: #000000;">111</span>,<span style="color: #000000;">137</span>,T:<span style="color: #000000;">21</span><span style="color: #000000;">-25</span>,<span style="color: #000000;">80</span>,<span style="color: #000000;">139</span>,<span style="color: #000000;">8080</span> <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.1</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -p U:<span style="color: #000000;">53</span>,<span style="color: #000000;">111</span>,<span style="color: #000000;">137</span>,T:<span style="color: #000000;">21</span><span style="color: #000000;">-25</span>,<span style="color: #000000;">80</span>,<span style="color: #000000;">139</span>,<span style="color: #000000;">8080</span> server1.cyberciti.biz
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -v -sU -sT -p U:<span style="color: #000000;">53</span>,<span style="color: #000000;">111</span>,<span style="color: #000000;">137</span>,T:<span style="color: #000000;">21</span><span style="color: #000000;">-25</span>,<span style="color: #000000;">80</span>,<span style="color: #000000;">139</span>,<span style="color: #000000;">8080</span> <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.254</span>
+&nbsp;
+<span style="color: #808080; font-style: italic;">## Scan all ports with * wildcard ##</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -p <span style="color: #ff0000;">&quot;*&quot;</span> <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.1</span>
+&nbsp;
+<span style="color: #808080; font-style: italic;">## Scan top ports i.e. scan <span style="color: #007800;">$number</span> most common ports ##</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> --top-ports <span style="color: #000000;">5</span> <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.1</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> --top-ports <span style="color: #000000;">10</span> <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.1</span>
+&nbsp;</pre><p>Sample outputs:</p><pre class="ini">Starting Nmap <span style="">5.00</span> <span style="">&#40;</span> http://nmap.org <span style="">&#41;</span> at <span style="">2012</span><span style="">-11</span><span style="">-27</span> <span style="">01</span>:<span style="">23</span> IST
+Interesting ports on <span style="">192.168</span><span style="">.1</span><span style="">.1</span>:
+PORT     STATE  SERVICE
+<span style="">21</span>/tcp   closed ftp
+<span style="">22</span>/tcp   open   ssh
+<span style="">23</span>/tcp   closed telnet
+<span style="">25</span>/tcp   closed smtp
+<span style="">80</span>/tcp   open   http
+<span style="">110</span>/tcp  closed pop3
+<span style="">139</span>/tcp  closed netbios-ssn
+<span style="">443</span>/tcp  closed https
+<span style="">445</span>/tcp  closed microsoft-ds
+<span style="">3389</span>/tcp closed ms-term-serv
+MAC Address: BC:AE:C5:C3:<span style="">16</span>:<span style="">93</span> <span style="">&#40;</span>Unknown<span style="">&#41;</span>
+&nbsp;
+Nmap done: <span style="">1</span> IP address <span style="">&#40;</span><span style="">1</span> host up<span style="">&#41;</span> scanned in <span style="">0.51</span> seconds
+&nbsp;</pre><h2>#16: The fastest way to scan all your devices/computers for open ports ever</h2><pre>nmap -T5 192.168.1.0/24</pre><h2>#17: How do I detect remote operating system?</h2><p>You can <a
+href="http://www.cyberciti.biz/faq/identify-remote-host-by-unix-linux-command/">identify a remote host apps and OS using the -O option</a>:</p><pre class="bash">&nbsp;
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -O <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.1</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -O  --osscan-guess <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.1</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -v -O --osscan-guess <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.1</span></pre><p>Sample outputs:</p><pre>
+Starting Nmap 5.00 ( http://nmap.org ) at 2012-11-27 01:29 IST
+NSE: Loaded 0 scripts for scanning.
+Initiating ARP Ping Scan at 01:29
+Scanning 192.168.1.1 [1 port]
+Completed ARP Ping Scan at 01:29, 0.01s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 01:29
+Completed Parallel DNS resolution of 1 host. at 01:29, 0.22s elapsed
+Initiating SYN Stealth Scan at 01:29
+Scanning 192.168.1.1 [1000 ports]
+Discovered open port 80/tcp on 192.168.1.1
+Discovered open port 22/tcp on 192.168.1.1
+Completed SYN Stealth Scan at 01:29, 0.16s elapsed (1000 total ports)
+Initiating OS detection (try #1) against 192.168.1.1
+Retrying OS detection (try #2) against 192.168.1.1
+Retrying OS detection (try #3) against 192.168.1.1
+Retrying OS detection (try #4) against 192.168.1.1
+Retrying OS detection (try #5) against 192.168.1.1
+Host 192.168.1.1 is up (0.00049s latency).
+Interesting ports on 192.168.1.1:
+Not shown: 998 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+MAC Address: BC:AE:C5:C3:16:93 (Unknown)
+<span style='color: rgb(0, 153, 0);'>Device type: WAP|general purpose|router|printer|broadband router</span>
+<span style='color: rgb(102, 102, 204);'>Running (JUST GUESSING) : Linksys Linux 2.4.X (95%), Linux 2.4.X|2.6.X (94%), MikroTik RouterOS 3.X (92%), Lexmark embedded (90%), Enterasys embedded (89%), D-Link Linux 2.4.X (89%), Netgear Linux 2.4.X (89%)
+Aggressive OS guesses: OpenWrt White Russian 0.9 (Linux 2.4.30) (95%), OpenWrt 0.9 - 7.09 (Linux 2.4.30 - 2.4.34) (94%), OpenWrt Kamikaze 7.09 (Linux 2.6.22) (94%), Linux 2.4.21 - 2.4.31 (likely embedded) (92%), Linux 2.6.15 - 2.6.23 (embedded) (92%), Linux 2.6.15 - 2.6.24 (92%), MikroTik RouterOS 3.0beta5 (92%), MikroTik RouterOS 3.17 (92%), Linux 2.6.24 (91%), Linux 2.6.22 (90%)
+No exact OS matches for host (If you know what OS is running on it, see http://nmap.org/submit/ ).</span>
+TCP/IP fingerprint:
+OS:SCAN(V=5.00%D=11/27%OT=22%CT=1%CU=30609%PV=Y%DS=1%G=Y%M=BCAEC5%TM=50B3CA
+OS:4B%P=x86_64-unknown-linux-gnu)SEQ(SP=C8%GCD=1%ISR=CB%TI=Z%CI=Z%II=I%TS=7
+OS:)OPS(O1=M2300ST11NW2%O2=M2300ST11NW2%O3=M2300NNT11NW2%O4=M2300ST11NW2%O5
+OS:=M2300ST11NW2%O6=M2300ST11)WIN(W1=45E8%W2=45E8%W3=45E8%W4=45E8%W5=45E8%W
+OS:6=45E8)ECN(R=Y%DF=Y%T=40%W=4600%O=M2300NNSNW2%CC=N%Q=)T1(R=Y%DF=Y%T=40%S
+OS:=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%R
+OS:D=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=
+OS:0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID
+OS:=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+Uptime guess: 12.990 days (since Wed Nov 14 01:44:40 2012)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=200 (Good luck!)
+IP ID Sequence Generation: All zeros
+Read data files from: /usr/share/nmap
+OS detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 12.38 seconds
+           Raw packets sent: 1126 (53.832KB) | Rcvd: 1066 (46.100KB)
+</pre><p>See also: <A
+href="http://www.cyberciti.biz/faq/find-out-remote-webserver-name/">Fingerprinting a web-server</a> and a <A
+href="http://www.cyberciti.biz/tips/howto-remotely-determine-dns-server-version.html">dns server</a> command line tools for more information.</p><h2>#18: How do I detect remote services (server / daemon) version numbers?</h2><pre>nmap -sV 192.168.1.1</pre><p>Sample outputs:</p><pre>Starting Nmap 5.00 ( http://nmap.org ) at 2012-11-27 01:34 IST
+Interesting ports on 192.168.1.1:
+Not shown: 998 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     <strong>Dropbear sshd 0.52 (protocol 2.0)</strong>
+80/tcp open  http?
+1 service unrecognized despite returning data.
+</pre><h2>#19: Scan a host using TCP ACK (PA) and TCP Syn (PS) ping</h2><p>If firewall is blocking standard ICMP pings, try the following host discovery methods:</p><pre>nmap -PS 192.168.1.1
+nmap -PS 80,21,443 192.168.1.1
+nmap -PA 192.168.1.1
+nmap -PA 80,21,200-512 192.168.1.1</pre><h2>#20: Scan a host using IP protocol ping</h2><pre>nmap -PO 192.168.1.1</pre><h2>#21: Scan a host using UDP ping</h2><p>This scan bypasses firewalls and filters that only screen TCP:</p><pre>nmap -PU 192.168.1.1
+nmap -PU 2000.2001 192.168.1.1</pre><h2>#22: Find out the most commonly used TCP ports using TCP SYN Scan</h2><pre class="bash">&nbsp;
+<span style="color: #808080; font-style: italic;">### Stealthy scan ###</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -sS <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.1</span>
+&nbsp;
+<span style="color: #808080; font-style: italic;">### Find out the most commonly used TCP ports using  TCP connect scan <span style="color: #7a0874; font-weight: bold;">&#40;</span>warning: no stealth scan<span style="color: #7a0874; font-weight: bold;">&#41;</span></span>
+<span style="color: #808080; font-style: italic;">###  OS Fingerprinting ###</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -sT <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.1</span>
+&nbsp;
+<span style="color: #808080; font-style: italic;">### Find out the most commonly used TCP ports using TCP ACK scan</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -sA <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.1</span>
+&nbsp;
+<span style="color: #808080; font-style: italic;">### Find out the most commonly used TCP ports using TCP Window scan</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -sW <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.1</span>
+&nbsp;
+<span style="color: #808080; font-style: italic;">### Find out the most commonly used TCP ports using TCP Maimon scan</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -sM <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.1</span>
+&nbsp;</pre><h2>#23: Scan a host for UDP services (UDP scan)</h2><p>Most popular services on the Internet run over the TCP protocol. DNS, SNMP, and DHCP are three of the most common UDP services. Use the following syntax to find out UDP services:</p><pre>nmap -sU nas03
+nmap -sU 192.168.1.1</pre><p>Sample outputs:</p><pre class="ini">&nbsp;
+Starting Nmap <span style="">5.00</span> <span style="">&#40;</span> http://nmap.org <span style="">&#41;</span> at <span style="">2012</span><span style="">-11</span><span style="">-27</span> <span style="">00</span>:<span style="">52</span> IST
+Stats: <span style="">0</span>:<span style="">05</span>:<span style="">29</span> elapsed<span style="color: #666666; font-style: italic;">; 0 hosts completed (1 up), 1 undergoing UDP Scan</span>
+UDP Scan Timing: About <span style="">32.49</span>% done<span style="color: #666666; font-style: italic;">; ETC: 01:09 (0:11:26 remaining)</span>
+Interesting ports on nas03 <span style="">&#40;</span><span style="">192.168</span><span style="">.1</span><span style="">.12</span><span style="">&#41;</span>:
+Not shown: <span style="">995</span> closed ports
+PORT     STATE         SERVICE
+<span style="">111</span>/udp  open|filtered rpcbind
+<span style="">123</span>/udp  open|filtered ntp
+<span style="">161</span>/udp  open|filtered snmp
+<span style="">2049</span>/udp open|filtered nfs
+<span style="">5353</span>/udp open|filtered zeroconf
+MAC Address: <span style="">00</span>:<span style="">11</span>:<span style="">32</span>:<span style="">11</span>:<span style="">15</span>:FC <span style="">&#40;</span>Synology Incorporated<span style="">&#41;</span>
+&nbsp;
+Nmap done: <span style="">1</span> IP address <span style="">&#40;</span><span style="">1</span> host up<span style="">&#41;</span> scanned in <span style="">1099.55</span> seconds
+&nbsp;</pre><h2>#24: Scan for IP protocol</h2><p>This type of scan allows you to determine which IP protocols (TCP, ICMP, IGMP, etc.) are supported by target machines:</p><pre>nmap -sO 192.168.1.1</pre><h2>#25: Scan a firewall for security weakness</h2><p>The following scan types exploit a subtle loophole in the TCP and good for testing security of common attacks:</p><pre class="bash">&nbsp;
+<span style="color: #808080; font-style: italic;">## TCP Null Scan to fool a firewall to generate a response ##</span>
+<span style="color: #808080; font-style: italic;">## Does not <span style="color: #000000; font-weight: bold;">set</span> any bits <span style="color: #7a0874; font-weight: bold;">&#40;</span>TCP flag header is <span style="color: #000000;">0</span><span style="color: #7a0874; font-weight: bold;">&#41;</span> ##</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -sN <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.254</span>
+&nbsp;
+<span style="color: #808080; font-style: italic;">## TCP Fin scan to check firewall ##</span>
+<span style="color: #808080; font-style: italic;">## Sets just the TCP FIN bit ##</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -sF <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.254</span>
+&nbsp;
+<span style="color: #808080; font-style: italic;">## TCP Xmas scan to check firewall ##</span>
+<span style="color: #808080; font-style: italic;">## Sets the FIN, PSH, and URG flags, lighting the packet up like a Christmas tree ##</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -sX <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.254</span>
+&nbsp;</pre><p>See <a
+href="http://www.cyberciti.biz/tips/linux-iptables-10-how-to-block-common-attack.html">how to block Xmas packkets, syn-floods and other conman attacks</a> with iptables.</p><h2>#26: Scan a firewall for packets fragments</h2><p>The -f option causes the requested scan (including ping scans) to use tiny fragmented IP packets. The idea is to split up the TCP header over<br
+/> several packets to make it harder for packet filters, intrusion detection systems, and other annoyances to detect what you are doing.</p><pre lang="bash"">
+nmap -f 192.168.1.1
+nmap -f fw2.nixcraft.net.in
+nmap -f 15 fw2.nixcraft.net.in
+## Set your own offset size with the --mtu option ##
+nmap --mtu 32 192.168.1.1
+</pre><h2>#27: Cloak a scan with decoys</h2><p>The <kbd>-D</kbd> option it appear to the remote host that the host(s) you specify as <a
+href="http://www.cyberciti.biz/tips/nmap-hide-ipaddress-with-decoy-ideal-scan.html">decoys are scanning the target network too</a>. Thus their IDS might report 5-10 port scans from unique IP addresses, but they won't know which IP was scanning them and which were innocent decoys:</p><pre>nmap -n -Ddecoy-ip1,decoy-ip2,your-own-ip,decoy-ip3,decoy-ip4 remote-host-ip
+nmap -n -D192.168.1.5,10.5.1.2,172.1.2.4,3.4.2.1 192.168.1.5</pre><h2>#28: Scan a firewall for MAC address spoofing</h2><pre class="bash">&nbsp;
+<span style="color: #808080; font-style: italic;">### Spoof your MAC address ##</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> --spoof-mac MAC-ADDRESS-HERE <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.1</span>
+&nbsp;
+<span style="color: #808080; font-style: italic;">### Add other options ###</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -v -sT -PN --spoof-mac MAC-ADDRESS-HERE <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.1</span>
+&nbsp;
+&nbsp;
+<span style="color: #808080; font-style: italic;">### Use a random MAC address ###</span>
+<span style="color: #808080; font-style: italic;">### The number <span style="color: #000000;">0</span>, means <span style="color: #c20cb9; font-weight: bold;">nmap</span> chooses a completely random MAC address ###</span>
+<span style="color: #c20cb9; font-weight: bold;">nmap</span> -v -sT -PN --spoof-mac <span style="color: #000000;">0</span> <span style="color: #000000;">192.168</span><span style="color: #000000;">.1</span><span style="color: #000000;">.1</span>
+&nbsp;</pre><h2>#29: How do I save output to a text file?</h2><p>The syntax is:</p><pre>nmap 192.168.1.1 > output.txt
+nmap -oN /path/to/filename 192.168.1.1
+nmap -oN output.txt 192.168.1.1
+</pre><h2>#30: Not a fan of command line tools?</h2><p>Try <a
+target="_blank" href="http://nmap.org/zenmap/">zenmap the official network mapper</a> front end:</p><blockquote><p>Zenmap is the official Nmap Security Scanner GUI. It is a multi-platform (Linux, Windows, Mac OS X, BSD, etc.) free and open source application which aims to make Nmap easy for beginners to use while providing advanced features for experienced Nmap users. Frequently used scans can be saved as profiles to make them easy to run repeatedly. A command creator allows interactive creation of Nmap command lines. Scan results can be saved and viewed later. Saved scan results can be compared with one another to see how they differ. The results of recent scans are stored in a searchable database.</p></blockquote><p>You can install zenmap using the following <a
+href="http://www.cyberciti.biz/tips/linux-debian-package-management-cheat-sheet.html">apt-get command</a>:<br
+/> <code>$ sudo apt-get install zenmap</code><br
+/> Sample outputs:</p><pre>[sudo] password for vivek:
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following NEW packages will be installed:
+  zenmap
+0 upgraded, 1 newly installed, 0 to remove and 11 not upgraded.
+Need to get 616 kB of archives.
+After this operation, 1,827 kB of additional disk space will be used.
+Get:1 http://debian.osuosl.org/debian/ squeeze/main zenmap amd64 5.00-3 [616 kB]
+Fetched 616 kB in 3s (199 kB/s)
+Selecting previously deselected package zenmap.
+(Reading database ... 281105 files and directories currently installed.)
+Unpacking zenmap (from .../zenmap_5.00-3_amd64.deb) ...
+Processing triggers for desktop-file-utils ...
+Processing triggers for gnome-menus ...
+Processing triggers for man-db ...
+Setting up zenmap (5.00-3) ...
+Processing triggers for python-central ...</pre><p>Type the following command to start zenmap:<br
+/> <code>$ sudo zenmap</code><br
+/> Sample outputs<br
+/><div
+id="attachment_275" style="width: 602px" class="wp-caption aligncenter"><a
+href="http://www.cyberciti.biz/networking/nmap-command-examples-tutorials/attachment/nmap-usage-examples-output/" rel="attachment wp-att-275"><img
+src="http://s0.cyberciti.org/uploads/cms/2012/11/nmap-usage-examples-output.png" alt="Fig.02: zenmap in action" title="Nmap Command GUI Usage Examples Output From zenmap" width="592" height="640" class="size-full wp-image-275" /></a><p
+class="wp-caption-text">Fig.02: zenmap in action</p></div></p><h2>How do I detect and block port scanning?</h2><p>Try the following resources:</p><ol><li><a
+href="http://www.cyberciti.biz/faq/linux-detect-port-scan-attacks/">How to use psad tool to detect and block port scan attacks in real time</a>.</li><li><a
+href="http://www.cyberciti.biz/faq/debian-ubuntu-linux-shorewall-firewall-configuration/">Debian / Ubuntu Linux: Install and Configure Shoreline Firewall (Shorewall)</a>.</li><li><a
+href="http://www.cyberciti.biz/faq/rhel-fedorta-linux-iptables-firewall-configuration-tutorial/">CentOS / Redhat Iptables Firewall Configuration Tutorial</a>.</li><li><a
+href="http://www.cyberciti.biz/tips/linux-iptables-examples.html">Linux: 20 Iptables Examples For New SysAdmins</a>.</li><li><a
+href="http://www.cyberciti.biz/tips/linux-security.html">20 Linux Server Hardening Security Tips</a>.</li></ol><h5>References:</h5><ul><li><a
+target="_blank" href="http://nmap.org/book/toc.html">The official Nmap project guide to network discovery and security Scanning</a>.</li><li><a
+target="_blank" href="http://nmap.org/">The official Nmap project</a> home page.</li></ul><p><em>The nmap command has many more options, please go through man page or the documentation for more information. What are some of your favorite nmap command-line tricks? Share your favorite tips, tricks, and advice in the comments below.</em></p> <a
+class="btn btn-tweet" href="https://twitter.com/intent/tweet?text=Top+30+Nmap+Command+Examples+For+Sys%2FNetwork+Admins&url=http://www.cyberciti.biz/networking/nmap-command-examples-tutorials/&via=nixcraft" title="Tweet this tutorial/page">Tweet it</a><a
+class="btn btn-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://www.cyberciti.biz/networking/nmap-command-examples-tutorials/" title="Share this page/tutorial on Facebook">Facebook it</a><a
+class="btn btn-google" href="https://plus.google.com/share?url=http://www.cyberciti.biz/networking/nmap-command-examples-tutorials/" title="Share this page/tutorial on Google+">Google+ it</a><a
+class="btn btn-pdf" href="http://www.cyberciti.biz/view/pdf/cms/270.php" title="Download this tutorial/faq as a free pdf">PDF it</a><a
+class="btn btn-typoerr" href="https://nixcraft.wufoo.com/forms/give-us-feedback-for-nixcraft/def/Field209=http://www.cyberciti.biz/networking/nmap-command-examples-tutorials/&Field211=Top 30 Nmap Command Examples For Sys/Network Admins" target="_blank" title="Click here to report Typo/Grammer and other Incorrect information">Found an error/typo on this page?</a><p><center> <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>  <ins
+class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-7825705102693166"
+data-ad-slot="7727708262"
+data-ad-format="auto"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> </center></p></div></div><div
+id="comments"><p
+class="comments_closed">Comments on this entry are closed.</p><div
+id="disqus_thread"><div
+id="dsq-content"><ul
+id="dsq-comments"><li
+class="comment even thread-even depth-1" id="dsq-comment-1388"><div
+id="dsq-comment-header-1388" class="dsq-comment-header"><cite
+id="dsq-cite-1388"> <span
+id="dsq-author-user-1388">Felipe</span></cite></div><div
+id="dsq-comment-body-1388" class="dsq-comment-body"><div
+id="dsq-comment-message-1388" class="dsq-comment-message"><p>Wow ! Pretty good and easy. Thank you so much for the great topic, I&#8217;m a huge fan of nmap/zenmap</p></div></div></li><li
+class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-1395"><div
+id="dsq-comment-header-1395" class="dsq-comment-header"><cite
+id="dsq-cite-1395"> <span
+id="dsq-author-user-1395">Roy</span></cite></div><div
+id="dsq-comment-body-1395" class="dsq-comment-body"><div
+id="dsq-comment-message-1395" class="dsq-comment-message"><p>I love namp. Great post Sir.</p></div></div></li><li
+class="comment even thread-even depth-1" id="dsq-comment-1396"><div
+id="dsq-comment-header-1396" class="dsq-comment-header"><cite
+id="dsq-cite-1396"> <span
+id="dsq-author-user-1396">cycop</span></cite></div><div
+id="dsq-comment-body-1396" class="dsq-comment-body"><div
+id="dsq-comment-message-1396" class="dsq-comment-message"><p>Nice Info,,,</p></div></div></li><li
+class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-1399"><div
+id="dsq-comment-header-1399" class="dsq-comment-header"><cite
+id="dsq-cite-1399"> <span
+id="dsq-author-user-1399">Jalal Hajigholamali</span></cite></div><div
+id="dsq-comment-body-1399" class="dsq-comment-body"><div
+id="dsq-comment-message-1399" class="dsq-comment-message"><p>Hi,</p><p>Very nice and useful article</p><p>Thanks again</p></div></div></li><li
+class="comment even thread-even depth-1" id="dsq-comment-1437"><div
+id="dsq-comment-header-1437" class="dsq-comment-header"><cite
+id="dsq-cite-1437"> <span
+id="dsq-author-user-1437">Chris</span></cite></div><div
+id="dsq-comment-body-1437" class="dsq-comment-body"><div
+id="dsq-comment-message-1437" class="dsq-comment-message"><p>Thanks for this very usefull post!!</p></div></div></li><li
+class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-1469"><div
+id="dsq-comment-header-1469" class="dsq-comment-header"><cite
+id="dsq-cite-1469"> <span
+id="dsq-author-user-1469">DUNGNA</span></cite></div><div
+id="dsq-comment-body-1469" class="dsq-comment-body"><div
+id="dsq-comment-message-1469" class="dsq-comment-message"><p>Thanks you for sharing&#8230;!</p></div></div></li><li
+class="comment even thread-even depth-1" id="dsq-comment-1512"><div
+id="dsq-comment-header-1512" class="dsq-comment-header"><cite
+id="dsq-cite-1512"> <span
+id="dsq-author-user-1512">A white hatter</span></cite></div><div
+id="dsq-comment-body-1512" class="dsq-comment-body"><div
+id="dsq-comment-message-1512" class="dsq-comment-message"><p>Several places mentioned the -PN switch, but this is depreciated, use -Pn instead.<br
+/> -Pn (No ping) .<br
+/> This option skips the Nmap discovery stage altogether. Normally, Nmap uses this stage to determine active machines for heavier scanning. By default, Nmap only performs heavy probing such as port scans, version detection,<br
+/> or OS detection against hosts that are found to be up. Disabling host discovery with -Pn causes Nmap to attempt the requested scanning functions against every target IP address specified. So if a class B target address<br
+/> space (/16) is specified on the command line, all 65,536 IP addresses are scanned. Proper host discovery is skipped as with the list scan, but instead of stopping and printing the target list, Nmap continues to perform<br
+/> requested functions as if each target IP is active. To skip ping scan and port scan, while still allowing NSE to run, use the two options -Pn -sn together.</p><p> For machines on a local ethernet network, ARP scanning will still be performed (unless &#8211;send-ip is specified) because Nmap needs MAC addresses to further scan target hosts. In previous versions of Nmap, -Pn was -P0.<br
+/> and -PN..</p></div></div></li><li
+class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-1665"><div
+id="dsq-comment-header-1665" class="dsq-comment-header"><cite
+id="dsq-cite-1665"> <span
+id="dsq-author-user-1665">Ksdyathish</span></cite></div><div
+id="dsq-comment-body-1665" class="dsq-comment-body"><div
+id="dsq-comment-message-1665" class="dsq-comment-message"><p>Very very useful and simple commands! Thank you.</p></div></div></li><li
+class="comment even thread-even depth-1" id="dsq-comment-2245"><div
+id="dsq-comment-header-2245" class="dsq-comment-header"><cite
+id="dsq-cite-2245"> <span
+id="dsq-author-user-2245">S Mohamed</span></cite></div><div
+id="dsq-comment-body-2245" class="dsq-comment-body"><div
+id="dsq-comment-message-2245" class="dsq-comment-message"><p>My favorite nmap to scan for OS of a range of IPs, with output as a XML file:<br
+/> nmap -A -T3 -oX MyFile.xml 192.168.56.101-120<br
+/> (A: OS detection, version detection, script scanning, traceroute    T3: Speed medium)</p></div></div></li><li
+class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-2274"><div
+id="dsq-comment-header-2274" class="dsq-comment-header"><cite
+id="dsq-cite-2274"> <span
+id="dsq-author-user-2274">Andrew</span></cite></div><div
+id="dsq-comment-body-2274" class="dsq-comment-body"><div
+id="dsq-comment-message-2274" class="dsq-comment-message"><p>One of the uses for nmap, as stated above, is to &#8220;find out if the system is infected with malware or virus.&#8221;  How is this accomplished?  Are you referring to using the script, http-malware-host?</p></div></div></li><li
+class="comment even thread-even depth-1" id="dsq-comment-2326"><div
+id="dsq-comment-header-2326" class="dsq-comment-header"><cite
+id="dsq-cite-2326"> <span
+id="dsq-author-user-2326">s33d3r</span></cite></div><div
+id="dsq-comment-body-2326" class="dsq-comment-body"><div
+id="dsq-comment-message-2326" class="dsq-comment-message"><p>Very Useful and Thanks for the information</p></div></div></li><li
+class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-2335"><div
+id="dsq-comment-header-2335" class="dsq-comment-header"><cite
+id="dsq-cite-2335"> <span
+id="dsq-author-user-2335">benhuan</span></cite></div><div
+id="dsq-comment-body-2335" class="dsq-comment-body"><div
+id="dsq-comment-message-2335" class="dsq-comment-message"><p>Love it , Thanks for sharing</p></div></div></li><li
+class="comment even thread-even depth-1" id="dsq-comment-2462"><div
+id="dsq-comment-header-2462" class="dsq-comment-header"><cite
+id="dsq-cite-2462"> <span
+id="dsq-author-user-2462">HD</span></cite></div><div
+id="dsq-comment-body-2462" class="dsq-comment-body"><div
+id="dsq-comment-message-2462" class="dsq-comment-message"><p>The question is how to monitor people who use/run NMAP and create a report about it &#8230;<br
+/> Thanks</p></div></div></li><li
+class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-2652"><div
+id="dsq-comment-header-2652" class="dsq-comment-header"><cite
+id="dsq-cite-2652"> <span
+id="dsq-author-user-2652">Murphy Mason</span></cite></div><div
+id="dsq-comment-body-2652" class="dsq-comment-body"><div
+id="dsq-comment-message-2652" class="dsq-comment-message"><p>very interreting</p></div></div></li><li
+class="comment even thread-even depth-1" id="dsq-comment-2687"><div
+id="dsq-comment-header-2687" class="dsq-comment-header"><cite
+id="dsq-cite-2687"> <span
+id="dsq-author-user-2687">Scott</span></cite></div><div
+id="dsq-comment-body-2687" class="dsq-comment-body"><div
+id="dsq-comment-message-2687" class="dsq-comment-message"><p>Anyone got any examples of using nmap to generate a RARP message?</p></div></div></li><li
+class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-2714"><div
+id="dsq-comment-header-2714" class="dsq-comment-header"><cite
+id="dsq-cite-2714"> <span
+id="dsq-author-user-2714">far</span></cite></div><div
+id="dsq-comment-body-2714" class="dsq-comment-body"><div
+id="dsq-comment-message-2714" class="dsq-comment-message"><p>what does nmap –sn –PI 192.168.1.0/24 do?</p></div></div></li><li
+class="comment even thread-even depth-1" id="dsq-comment-2728"><div
+id="dsq-comment-header-2728" class="dsq-comment-header"><cite
+id="dsq-cite-2728"> <span
+id="dsq-author-user-2728">Bob Cynic</span></cite></div><div
+id="dsq-comment-body-2728" class="dsq-comment-body"><div
+id="dsq-comment-message-2728" class="dsq-comment-message"><p>Beautifully formatted man page&#8230;thanks! ;)</p></div></div></li><li
+class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-2797"><div
+id="dsq-comment-header-2797" class="dsq-comment-header"><cite
+id="dsq-cite-2797"> <span
+id="dsq-author-user-2797">Nully man</span></cite></div><div
+id="dsq-comment-body-2797" class="dsq-comment-body"><div
+id="dsq-comment-message-2797" class="dsq-comment-message"><p>hello pleas i have download nmap and install , but idnt know wher to even run it</p></div></div></li><li
+class="comment even thread-even depth-1" id="dsq-comment-2893"><div
+id="dsq-comment-header-2893" class="dsq-comment-header"><cite
+id="dsq-cite-2893"> <span
+id="dsq-author-user-2893">HoppingBunny</span></cite></div><div
+id="dsq-comment-body-2893" class="dsq-comment-body"><div
+id="dsq-comment-message-2893" class="dsq-comment-message"><p>If you are on a linux or similar system, it should be available on the command line like this:</p><p>sudo nmap -F <a
+href="http://www.gmail.com" rel="nofollow">http://www.gmail.com</a> &lt;== type this on the command line</p><p>you will get the output below:</p><p>Starting Nmap 5.51 ( <a
+href="http://nmap.org" rel="nofollow">http://nmap.org</a> ) at 2015-05-13 23:18 EDT<br
+/> Nmap scan report for <a
+href="http://www.gmail.com" rel="nofollow">http://www.gmail.com</a> (216.58.219.197)<br
+/> Host is up (0.010s latency).<br
+/> rDNS record for 216.58.219.197: lga25s40-in-f5.1e100.net<br
+/> Not shown: 98 filtered ports<br
+/> PORT    STATE SERVICE<br
+/> 80/tcp  open  http<br
+/> 443/tcp open  https</p></div></div></li></ul></div></div> <script type="text/javascript">var disqus_url = 'http://www.cyberciti.biz/networking/nmap-command-examples-tutorials/';
+var disqus_identifier = '270 http://www.cyberciti.biz/?p=270';
+var disqus_container_id = 'disqus_thread';
+var disqus_shortname = 'cyberciti';
+var disqus_title = "Top 30 Nmap Command Examples For Sys\/Network Admins";
+var disqus_config_custom = window.disqus_config;
+var disqus_config = function () {
+    /*
+    All currently supported events:
+    onReady: fires when everything is ready,
+    onNewComment: fires when a new comment is posted,
+    onIdentify: fires when user is authenticated
+    */
+    this.language = '';
+        this.callbacks.onReady.push(function () {
+        // sync comments in the background so we don't block the page
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = '?cf_action=sync_comments&post_id=270';
+        var firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(script, firstScript);
+    });
+    if (disqus_config_custom) {
+        disqus_config_custom.call(this);
+    }
+};
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script> </div><div
+class="prev_next"><p
+class="next_post">Next post: <a
+href="http://www.cyberciti.biz/linux-news/download-samba4-software-active-directory-compatible-server/" rel="next">Download Samba 4: Active Directory Compatible Server</a></p><p
+class="previous_post">Previous post: <a
+href="http://www.cyberciti.biz/programming/color-terminal-highlighter-for-diff-files/" rel="prev">diff Command: Colorize Output On The Unix / Linux Command Line</a></p></div></div><div
+class="sidebar"><div
+class="widget widget_text" id="text-15"><div
+class="textwidget"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>  <ins
+class="adsbygoogle"
+style="display:inline-block;width:300px;height:250px"
+data-ad-client="ca-pub-7825705102693166"
+data-ad-slot="7895531150"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div><div
+class="widget search-form" id="thesis-search-widget-2"><form
+class="search_form" method="get" action="http://www.cyberciti.biz"><p> <input
+class="input_text" type="text" id="s" name="s" value="To search, type and hit enter" onfocus="if (this.value == 'To search, type and hit enter') {this.value = '';}" onblur="if (this.value == '') {this.value = 'To search, type and hit enter';}" /> <input
+type="hidden" id="searchsubmit" value="Search" /></p></form></div><div
+class="widget widget_text" id="text-16"><div
+class="textwidget"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>  <ins
+class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-7825705102693166"
+data-ad-slot="3521177162"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div><div
+class="widget widget_text" id="text-17"><p
+class="widget_title">Featured Articles:</p><div
+class="textwidget"><ul><li><a
+href="http://www.cyberciti.biz/open-source/30-cool-best-open-source-softwares-of-2013/">30 Cool Open Source Software I Discovered in 2013</a></li><li><a
+href="http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html">30 Handy Bash Shell Aliases For Linux / Unix / Mac OS X</a></li><li><a
+href="http://www.cyberciti.biz/networking/nmap-command-examples-tutorials/">Top 30 Nmap Command Examples For Sys/Network Admins</a></li><li><a
+href="http://www.cyberciti.biz/tips/php-security-best-practices-tutorial.html">25 PHP Security Best Practices For Sys Admins</a></li><li><a
+href="http://www.cyberciti.biz/tips/top-linux-monitoring-tools.html">20 Linux System Monitoring Tools Every SysAdmin Should Know</a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-security.html">20 Linux Server Hardening Security Tips</a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-iptables-examples.html">Linux: 20 Iptables Examples For New SysAdmins</a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html">Top 20 OpenSSH Server Best Security Practices </a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-unix-bsd-nginx-webserver-security.html">Top 20 Nginx WebServer Best Security Practices</a><li><A
+href="http://www.cyberciti.biz/tips/check-unix-linux-configuration-file-for-syntax-errors.html">20 Examples: Make Sure Unix / Linux Configuration Files Are Free From Syntax Errors</a><li><a
+href="http://www.cyberciti.biz/open-source/best-terminal-applications-for-linux-unix-macosx/">15 Greatest Open Source Terminal Applications Of 2012</a></li><li><a
+href="http://www.cyberciti.biz/tips/my-10-unix-command-line-mistakes.html">My 10 UNIX Command Line Mistakes</a></li><li><a
+href="http://www.cyberciti.biz/tips/open-source-project-management-software.html">Top 10 Open Source Web-Based Project Management Software</a></li><li><a
+href="http://www.cyberciti.biz/tips/download-email-client-for-linux-mac-osx-windows.html">Top 5 Email Client For Linux, Mac OS X, and Windows Users</a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-laptop.html">The Novice Guide To Buying A Linux Laptop</a></li></ul></div></div><div
+class="widget widget_rss" id="rss-2"><p
+class="widget_title"><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/feed/'><img
+style='border:0' width='14' height='14' src='http://www.cyberciti.biz/cms/wp-includes/images/rss.png' alt='RSS' /></a> <a
+class='rsswidget' href='http://www.cyberciti.biz/faq'>Linux Howtos and Tutorials</a></p><ul><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/debian-8-ubuntu-14-04-lts-install-suhosin-extension-command/'>Debian 8 and Ubuntu 14.04 LTS Install Suhosin PHP Extension To Protect Your Server</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/apple-mac-osx-find-wi-fi-network-password/'>How To Find the WiFi Password on Mac OS X</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/how-to-update-debian-or-ubuntu-linux-containers-lxc/'>How to update Debian or Ubuntu Linux containers (lxc) VM</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/unix-linux-bash-find-out-the-exit-codes-of-all-piped-commands/'>Bash: Find out the exit codes of all piped commands</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/how-to-find-out-freebsd-version-and-patch-level-number/'>How To Find Out FreeBSD Version and Patch Level Number</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/how-to-setup-a-lamp-server-on-debian-linux-8-jessie/'>How To Setup a LAMP Server on Debian Linux 8 (Jessie)</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/linuxunix-how-to-extract-and-decompress-a-bz2-tbz2-file/'>Linux/Unix: How To Extract and Decompress  a .bz2/.tbz2 File</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/debian-ubuntu-restricting-ssh-user-session-to-a-directory-chrooted-jail/'>Debian/Ubuntu Linux: Restrict an SSH user session to a specific directory by setting chrooted jail</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/linux-unix-ssh-proxycommand-passing-through-one-host-gateway-server/'>SSH ProxyCommand example: Going through one host to reach another server</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/linux-disconnect-from-lxc-console-ctrl-q-a-shortcut/'>Linux exit from lxc-console keyboard shortcut</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/linux-unix-running-sudo-command-without-a-password/'>How to run sudo command without a password on a Linux or Unix</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/cve-2015-3456-patch-venom-on-debian-ubuntu-fedora-centos-rhel-linux/'>How To Patch and Protect Linux Server Against the VENOM Vulnerability # CVE-2015-3456</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/howto-install-gnome-gui-desktop-on-centos-rhel-7-server/'>How To CentOS / RHEL 7 Install Gnome Desktop Using Yum</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/linux-unix-osx-bsd-ssh-multiplexing-to-speed-up-ssh-connections/'>Linux/Unix: OpenSSH Multiplexer To Speed Up OpenSSH Connections</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/rhel-redhat-centos-7-change-hostname-command/'>RHEL / Centos Linux 7: Change and Set Hostname Command</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/howto-yum-downgrade-packages-on-rhel-centos-fedora-scientific-linux/'>CentOS/RHEL Use yum Command To Downgrade or Rollback Updates</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/howto-block-internet-explorer-browser-with-squid-proxy-server-on-a-linuxunix-server/'>HowTo Block Internet Explorer Browser With Squid Proxy Server on a Linux/Unix Server</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/unable-to-use-ping-in-centos-linux-rhel-7-docker-container/'>RHEL / CentOS Linux 7 Enable Ping Access In Docker Container</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/debian-ubuntu-linux-auto-mounting-windows-ntfs-file-system/'>HowTo Debian/Ubuntu Linux Auto Mount Windows NTFS File System [ntfs-3g]</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/linux-find-package-includes-a-fixpatch-via-cve-number/'>Debian/Ubuntu Linux: Find If Installed Package Includes a Fix/Patch Via CVE Number</a></li></ul></div></div></div><div
+class="footer"> &copy;2000-2015 nixCraft. All rights reserved. <a
+href="/tips/privacy">Privacy Policy</a> - <a
+href="/tips/disclaimer">Terms of Service</a> - <a
+href="/tips/contact-us">Questions or Comments</a><br/> The content is <a
+href="/tips/copyright">copyrighted to nixCraft</a> and may not be reproduced on other websites.</div></div> <script type="text/javascript">// 
+        var disqus_shortname = 'cyberciti';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('data-dsqidentifier'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        //</script><script type='text/javascript' src='http://www.cyberciti.biz/cms/wp-includes/js/comment-reply.min.js?ver=4.2.3'></script>
+<script type="text/javascript">
+(function(){
+	var classes = document.getElementsByClassName('menu_control');
+	for (i = 0; i < classes.length; i++) {
+		classes[i].onclick = function() {
+			var menu = this.nextElementSibling;
+			if (/show_menu/.test(menu.className))
+				menu.className = menu.className.replace('show_menu', '').trim();
+			else
+				menu.className += ' show_menu';
+		};
+	}
+})();
+</script>
+<noscript><style type="text/css" scoped>.menu { display: block; }</style></noscript>
+<script src="http://www.cyberciti.biz/mint/?js" type="text/javascript"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-108650-1']);
+  _gaq.push(['_setDomainName', 'www.cyberciti.biz']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</body>
+</html>
