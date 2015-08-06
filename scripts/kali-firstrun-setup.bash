@@ -17,7 +17,7 @@ KALICMD="kali-update.bash"
 if [[ ! -e "$KALICMD" ]];then
    echo "$KALICMD Does Not Exist"
 else
-   echo ./$KALICMD
+   ./$KALICMD
 fi
 
 # Download The Hacker Playbook script, good tricks there
@@ -29,12 +29,15 @@ else
 fi
 
 # Add some additional functionality
-echo "Add archive managers..."
-if apt-get install unrar unace rar unrar p7zip zip unzip p7zip-full p7zip-rar file-roller zerofree -y; then
-   echo "[+] apt-get install successful"
-else
-   echo "[-] apt-get install had failuers"
-fi
+echo "Add additional packages..."
+
+for package in unrar unace rar unrar p7zip zip unzip p7zip-full p7zip-rar file-roller zerofree; do
+   if apt-get install ${package} -y -qq; then
+      echo "[+] apt-get install ${package} successful"
+   else
+      echo "[-] apt-get install ${package} failed"
+   fi
+done
 
 exit
 # Add a nonroot user
