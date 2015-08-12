@@ -12,17 +12,34 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 # For first run, update the distro to the latest
-echo "1 - Update Distro..."
-./kali-update.bash
+echo "Update Distro..."
+KALICMD="kali-update.bash"
+if [[ ! -e "$KALICMD" ]];then
+   echo "$KALICMD Does Not Exist"
+else
+   ./$KALICMD
+fi
 
 # Download The Hacker Playbook script, good tricks there
-echo "2 - Download thpsetup.py from oaass..."
-wget https://gist.githubusercontent.com/oaass/bf136f3ea20d56ed0f83/raw/b3356c1704b60dc8e68caf42502403339da8eb91/thpsetup.py
+echo "Download thpsetup.py from oaass..."
+if wget -N https://gist.githubusercontent.com/oaass/bf136f3ea20d56ed0f83/raw/b3356c1704b60dc8e68caf42502403339da8eb91/thpsetup.py; then
+   echo "[+] thpsetup.py download successful"
+else
+   echo "[-] thpsetup.py download failed"
+fi
 
 # Add some additional functionality
-echo "3 - Add archive managers..."
-apt-get install unrar unace rar unrar p7zip zip unzip p7zip-full p7zip-rar file-roller zerofree -y
+echo "Add additional packages..."
 
+for package in unrar unace rar unrar p7zip zip unzip p7zip-full p7zip-rar file-roller zerofree; do
+   if apt-get install ${package} -y -qq; then
+      echo "[+] apt-get install ${package} successful"
+   else
+      echo "[-] apt-get install ${package} failed"
+   fi
+done
+
+exit
 # Add a nonroot user
 echo "4 - Add a kaliuser..."
 useradd -m kaliuser
