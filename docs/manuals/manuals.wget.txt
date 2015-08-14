@@ -1,0 +1,11 @@
+https://www.defcon.org/images/defcon-18/dc-18-presentations/Hamiel-Wielgoszewski/DEFCON-18-Hamiel-Wielgoszewski-Offensive-Python.pdf -O Offensive_Python.pdf
+https://groups.google.com/group/python-mg/attach/e5728b11878feae5/Black%20Hat%20Python,%20Python%20Programming%20for%20Hackers.pdf -O Python_Programming_For_Hackers.pdf
+https://watchthestack.files.wordpress.com/2015/03/rtfm-red-team-field-manual.pdf -O Red_Team_Field_Manual.pdf
+http://www.tldp.org/LDP/abs/abs-guide.pdf -O Advanced_Bash-Scripting_Guide.pdf
+http://www.tldp.org/LDP/Bash-Beginners-Guide/Bash-Beginners-Guide.pdf -O Bash_Guide_For_Beginners.pdf
+http://www.tldp.org/LDP/intro-linux/intro-linux.pdf -O Introduction_To_Linux.pdf
+http://www.tldp.org/LDP/GNU-Linux-Tools-Summary/GNU-Linux-Tools-Summary.pdf -O GNU_Linux_Tools_Summary.pdf
+http://www.tldp.org/LDP/sag/sag.pdf -O Linux_Systems_Admins_Guide.pdf
+http://www.tldp.org/LDP/Pocket-Linux-Guide/Pocket-Linux-Guide.pdf -O Pocket_Linux_Guide.pdf
+http://www.tldp.org/LDP/nag2/nag2.pdf -O Linux_Network_Admin_Guide.pdf
+
