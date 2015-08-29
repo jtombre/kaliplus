@@ -7,9 +7,9 @@
 ################################################################################
 
 # Get a list of IP addresses to start server on
-IPaddr=( $(ifconfig eth0 | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'  ) )
+IPaddr=( $(ifconfig | grep 'inet addr:' | cut -d: -f2 | awk '{ {printf $1" ";next;}1}' ) )
 i=0
-declare -a IPaddr
+
 CSPATH="/opt/cobaltstrike"
 
 # Test that CS directory exists
@@ -22,7 +22,7 @@ fi
 
 # Gather IP addresses for server to listen on
 echo "*** IP Select Menu ***"
-for IP in $IPaddr; do
+for IP in ${IPaddr[*]}; do
    echo "   $i) $IP"
    ((i=i+1))
 done
