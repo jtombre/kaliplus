@@ -14,3 +14,10 @@ To provide materials that allows anyone to gain practical 'hands-on' experience 
 
 https://exploit-exercises.com/
 Exploit-exercises.com provides a variety of virtual machines, documentation and challenges that can be used to learn about a variety of computer security issues such as privilege escalation, vulnerability analysis, exploit development, debugging, reverse engineering, and general cyber security issues. 
+
+## TRAINING
+http://www.securitytube.net/
+Learn Pentesting and Ethical Hacking Online for FREE!
+
+www.advancedpentest.com/training
+Tradecraft is a free course on red team operations. This course will provide the background and skills necessary to execute a targeted attack as an external actor with Cobalt Strike.
